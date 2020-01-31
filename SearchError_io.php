@@ -6,9 +6,9 @@
 	//クリックジャッキング対策
 	header('X-FRAME-OPTIONS: SAMEORIGIN');
 	//DB接続 start
-	$dsn='mysql:dbname=tb210435db;host=localhost';
-	$user='tb-210435';	
-	$password = 'uTCtdSRht7';
+	$dsn='mysql:dbname=xxx;host=xxx';
+	$user='xxx';	
+	$password = 'xxx';
 	$pdo = new PDO($dsn, $user, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 	// エラーなら1を立てる
 	$error_flg = 0;
@@ -37,28 +37,6 @@
 		}
 	}
 ?>
-<!-- 
-error_sol エラー番号とその内容 何行目っていうところはなくす
-explode ( string $delimiter , string $string [, int $limit = PHP_INT_MAX ] ) : array
-
-Parse error: syntax error, unexpected 'if' (T_IF) in /public_html/SearchError_io.php on line 21
-20行目に(;)がなかった
-
-Parse error: syntax error, unexpected '；' (T_STRING), expecting ',' or ';' in /public_html/SearchError_io.php on line 30
-30行目で全角の；がはいっていたので半角の;に直した
-
-Parse error: syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /public_html/SearchError_io.php on line 102
-どっかでカッコが抜けている。必ずしも102ではない
-<?php?>が2箇所に存在していたことによるエラー
-preg_matchらへんと正規表現の理解必要
-エラー表示をコピー、そのエラーの2個目までerrorまでの文字列を正規表現で表示
-preg_matchの第一引数に正規表現持ってくる。第二引数にDBのErrorをあてて正規表現にあったやつを出力するようにしたい。
-Preg_matChの第三引数が重要になってくると思われ。第三引数の配列の中に正規表現に当たったやつが格納されるのでは？？
-1・31エラーの内容をコピペするのは今後の課題にしよう
-とりあえずは選択された言語のエラー内容が出てくるようにしよう
-1/31エラーがながいとTEXTが見えなくなるから長くした
-
- -->
 
 <!DOCTYPE html>
 <html>
@@ -81,3 +59,27 @@ Preg_matChの第三引数が重要になってくると思われ。第三引数�
 	<?php endif; ?>
 </body>
 </html>
+
+
+<!-- 
+error_sol エラー番号とその内容 何行目っていうところはなくす
+explode ( string $delimiter , string $string [, int $limit = PHP_INT_MAX ] ) : array
+
+Parse error: syntax error, unexpected 'if' (T_IF) in /public_html/SearchError_io.php on line 21
+20行目に(;)がなかった
+
+Parse error: syntax error, unexpected '；' (T_STRING), expecting ',' or ';' in /public_html/SearchError_io.php on line 30
+30行目で全角の；がはいっていたので半角の;に直した
+
+Parse error: syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /public_html/SearchError_io.php on line 102
+どっかでカッコが抜けている。必ずしも102ではない
+<?php?>が2箇所に存在していたことによるエラー
+preg_matchらへんと正規表現の理解必要
+エラー表示をコピー、そのエラーの2個目までerrorまでの文字列を正規表現で表示
+preg_matchの第一引数に正規表現持ってくる。第二引数にDBのErrorをあてて正規表現にあったやつを出力するようにしたい。
+Preg_matChの第三引数が重要になってくると思われ。第三引数の配列の中に正規表現に当たったやつが格納されるのでは？？
+1・31エラーの内容をコピペするのは今後の課題にしよう
+とりあえずは選択された言語のエラー内容が出てくるようにしよう
+1/31エラーがながいとTEXTが見えなくなるから長くした
+
+ -->
