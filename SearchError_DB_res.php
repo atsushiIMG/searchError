@@ -6,9 +6,9 @@
 	//クリックジャッキング対策
 	header('X-FRAME-OPTIONS: SAMEORIGIN');
 	//DB接続 start
-	$dsn='mysql:dbname=tb210435db;host=localhost';
-	$user='tb-210435';	
-	$password = 'uTCtdSRht7';
+	$dsn='mysql:dbname=xxxx;host='xxx';
+	$user='xxx';	
+	$password = 'xxx';
 	$pdo = new PDO($dsn, $user, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 	//テーブル登録
 	$sql = "CREATE TABLE IF NOT EXISTS error_table_v2"
@@ -51,8 +51,3 @@
 	// }
 
 ?>
-<!-- 
-とりあえずテーブルは作れた
-formにアクセスするときにログイン認証をつけて、荒らし回避のために会員限定に使用
-あとはDBから検索機能をd設けて、エラーに対して何割一致してたら、それに対応する回答を出力するかを決める
- -->
