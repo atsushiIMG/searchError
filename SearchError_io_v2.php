@@ -6,9 +6,9 @@
 	//クリックジャッキング対策
 	header('X-FRAME-OPTIONS: SAMEORIGIN');
 	//DB接続 start
-	$dsn='mysql:dbname=tb210435db;host=localhost';
-	$user='tb-210435';	
-	$password = 'uTCtdSRht7';
+	$dsn='mysql:dbname=xxxxxxx;host=localhost';
+	$user='txxxxxx';	
+	$password = 'xxxxxxxxxxxx';
 	$pdo = new PDO($dsn, $user, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 	// エラーなら1を立てる
 	$error_flg = 0;
